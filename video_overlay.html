@@ -2,14 +2,45 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Overlay Buttons</title>
-  <link rel="stylesheet" href="video_overlay.css">
+  <title>SNS Button Overlay</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    #button-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .sns-button {
+      width: 64px;
+      height: 64px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .sns-button:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-  <div class="button-container">
-    <button class="btn" onclick="openLink('https://donate.example.com')">Donate</button>
-    <button class="btn" onclick="openLink('https://twitter.com/wanineko104')">Twitter</button>
+  <div id="button-container">
+    <img class="sns-button" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Twitter" onclick="openLink('https://twitter.com/wanineko104')" />
+    <img class="sns-button" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Donate-button.png" alt="Donate" onclick="openLink('https://donate.example.com/')" />
   </div>
-  <script src="video_overlay.js"></script>
+
+  <script>
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
