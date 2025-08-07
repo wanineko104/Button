@@ -1,0 +1,24 @@
+{
+  "manifest_version": 1,
+  "author_name": "YourName",
+  "description": "物理ボタン風SNSリンク拡張",
+  "name": "SNS Button Overlay",
+  "version": "1.0",
+  "vendor_code": "your-vendor",
+  "support_email": "your@email.com",
+  "homepage": "https://yourdomain.com/",
+  "assets": {
+    "viewer_overlay": {
+      "url": "video_overlay.html",
+      "size": "1024x768"
+    }
+  },
+  "whitelisted_urls": [
+    "https://yourdomain.com/*",
+    "https://donate.example.com/*",
+    "https://twitter.com/*",
+    "https://twitter.com/wanineko104/*"
+  ],
+  "permissions": [],
+  "panel_height": 300
+}
